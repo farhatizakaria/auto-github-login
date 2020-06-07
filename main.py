@@ -1,4 +1,4 @@
-from time import sleep
+#from time import sleep
 import secrets # importing the secret.py module
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys # accessing to keyboad LOOOL
@@ -26,9 +26,8 @@ def login():
     if driver.current_url == 'https://github.com/sessions/verified-device':
         # Sometimes is required to write a code that GitHub sends to your email
         verify_field = '//*[@id="otp"]'
-        print('Waiting fill in the verification code')
-        print('You have 10 seconds...')
-        sleep(10)
+        #print('Waiting fill in the verification code')
+        #sleep(10)
         code = input('Please write the code right here: ')
         driver.find_element_by_xpath(verify_field).send_keys(code, Keys.ENTER)
     else:
